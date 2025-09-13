@@ -1,0 +1,173 @@
+
+/* General Page */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0B3D0B; /* Dark Green */
+  color: #FFD700; /* Golden */
+  line-height: 1.6;
+}
+
+
+
+/* Header */
+header {
+  background-color: #064D06;
+  padding: 25px 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  color: #FFD700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Contact Form */
+.contact-container {
+  max-width: 700px;
+  margin: 50px auto;
+  background-color: #145214;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #FFD700;
+  border-bottom: 2px solid #FFD700;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #FFD70033;
+  border-radius: 8px;
+  background-color: #0D3A0D;
+  color: #FFD700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover & Focus Effects */
+form input:hover,
+form textarea:hover {
+  background: #064420;
+  color: #FFD700;
+  box-shadow: 0 0 10px rgba(255,215,0,0.6);
+  transform: scale(1.02);
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #FFD700;
+  outline: none;
+  box-shadow: 0 0 12px rgba(255,215,0,0.9);
+  background-color: #133d13;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #ccccaa;
+}
+
+/* Button */
+button {
+  background-color: #FFD700;
+  color: #064420;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #064420;
+  color: #FFD700;
+  box-shadow: 0 0 15px rgba(255,215,0,0.9);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 15px;
+  background-color: #064D06;
+  color: #FFD700;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  border-top: 2px solid #FFD700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #064420;
+    width: 200px;
+    position: absolute;
+    top: 55px;
+    right: 20px; 
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+  .navbar ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .navbar ul li a {
+    color: #FFD700;
+    display: block;
+    width: 100%;
+  }
+  .navbar ul.show {
+    display: flex;
+    animation: dropdown 0.3s ease-in-out;
+  }
+  @keyframes dropdown {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    margin: 30px 15px;
+    padding: 25px 20px;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .contact-container h2 {
+    font-size: 1.4rem;
+  }
+}

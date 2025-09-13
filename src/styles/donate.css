@@ -1,0 +1,246 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: #033d1d; 
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+
+
+/* Donate Container */
+.donate-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #044d26; 
+  padding: 25px;
+  border-radius: 12px;
+   border: 2px solid #FFD700;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.donate-container .header {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.donate-container h2 {
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+  color: #FFD700;
+}
+
+Input Groups
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 15px;
+   border: 2px solid transparent;
+  transition: all 0.3s ease;
+
+}
+
+.input-group i {
+  color: #033d1d;
+  margin-right: 8px;
+}
+
+.input-group input,
+.input-group select {
+  border: none;
+  border: 2px solid #ccc;
+  width: 100%;
+  padding: 20x;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+/* For Payment Sections if needed */
+.payment-section .input-group input {
+  height: 50px;        /* Consistent height */
+}
+/* Golden Border for Inputs and Dropdown */
+.input-group input:focus,
+.input-group select:focus {
+  padding: 20px;
+  border-color: #FFD700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+/* Payment Sections */
+.payment-section {
+  display: none;
+  
+  margin-bottom: 15px;
+}
+
+Button
+.btn {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  color: #033d1d;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+}
+
+Popup
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #044d26;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  color: #FFD700;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.popup-content h3 {
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #FFD700;
+  color: #033d1d;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup-content button:hover {
+  background: #e6c200;
+}
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+      @media (max-width: 768px) {
+     .navbar
+      {
+        position: relative;
+      }
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        background: #064420;
+        width: 180px;
+        position: absolute;
+        top: 55px;
+        right: 20px; 
+        
+        padding: 10px 0;
+          border-radius: 8px;  
+         box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      }
+      .navbar ul li {
+      text-align: center;
+       padding: 8px 0;
+  }
+
+  .navbar ul li a 
+    {
+     color: #FFD700;
+    display: block;
+    width: 100%;
+      }
+      .navbar ul.show {
+        display: flex;
+        animation: dropdown 0.3s ease-in-out;
+      }
+
+      @keyframes dropdown {
+        from {opacity: 0; transform: translateY(-10px);}
+        to {opacity: 1; transform: translateY(0);}
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+
+  .donate-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .input-group i {
+    margin-bottom: 6px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.1rem;
+  }
+
+  .donate-container .header {
+    font-size: 1.3rem;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 0.95rem;
+    padding: 7px;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 9px;
+  }
+}
