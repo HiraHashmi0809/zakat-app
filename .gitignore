@@ -7,60 +7,33 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-# =========================
 # Node.js dependencies
-# =========================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# =========================
 # Build output (Vite, React)
-# =========================
 dist/
 build/
 
-# =========================
 # Environment files
-# =========================
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# =========================
 # System files
-# =========================
 .DS_Store
 Thumbs.db
 
-# =========================
 # IDE / Editor files
-# =========================
 .vscode/
 .idea/
 *.swp
 
-# =========================
 # Logs
-# =========================
 *.log
 logs/
 pids/
@@ -68,9 +41,7 @@ pids/
 *.seed
 *.pid.lock
 
-# =========================
 # Media / Large files
-# =========================
 *.mp4
 *.avi
 *.mov
@@ -78,15 +49,16 @@ pids/
 *.wav
 *.zip
 *.rar
+*.psd
+*.ai
 
-# =========================
 # Coverage / Testing
-# =========================
 coverage/
 *.lcov
 
-# =========================
+# Ignore entire assets folder (optional)
+src/assests/*
+
 # Optional: Ignore generated assets
-# =========================
 public/vite.svg
 src/assets/react.svg

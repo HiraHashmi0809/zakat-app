@@ -1,121 +1,20 @@
-/* 
- nav {
-  margin: 0;
-  padding: 0;
-}
-.navbar {
-  position: fixed;          
-   top: 0;
-  left: 0;
-   width: 100%;               
-   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #064420;
-  padding: 40px 55px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.brand img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #FFD700; 
-   letter-spacing: 1px;
-}
-
-.navbar ul {
-  display: flex;
-   list-style: none;
-  gap: 25px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  position: relative;
-  transition: 0.3s;
-}
-
-.navbar ul li a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #FFD700;
-  left: 0;
-  bottom: -5px;
-  transition: 0.3s;
-}
-
-.navbar ul li a:hover::after {
-  width: 100%;
-}
-
-Hamburger menu
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-   width: 25px;
-  height: 3px;
-  background: #FFD700;
-  border-radius: 2px;
-}
-
-Responsive Navbar
- @media screen and (max-width: 768px) {
-  .navbar ul {
-    display: none;
-   flex-direction: column;
-    background: #064420;
-    width: 100%;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    padding: 10px 0;
-  }
-
-  .navbar ul.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-}   */
-/* Navbar Container */
+/* ==========================
+   Navbar Container
+========================== */
 .navbar {
   width: 100%;
   height: 70px;
-  background-color: #064420; /* Dark Green */
+  background-color: #064420; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Brand / Logo */
@@ -132,12 +31,12 @@ Responsive Navbar
 }
 
 .navbar .logo {
-  color: #FFD700; /* Golden Text */
+  color: #FFD700; 
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Navbar Menu */
+/* Desktop Menu */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -145,55 +44,180 @@ Responsive Navbar
 }
 
 .navbar ul li a {
-  color: #FFD700; /* Golden Text */
+  color: #FFD700; 
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
+  /* padding: 5px 5px;         */
+  display: inline-block;
 }
 
 .navbar ul li a:hover {
+  background-color: #033d1d; 
   color: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-/* Hamburger Menu (3 lines) */
+/* Dropdown - Desktop */
+.navbar ul li.dropdown {
+  position: relative;
+}
+
+.navbar ul li.dropdown ul {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #05532b;
+  border: 1px solid #FFD700;
+  border-radius: 6px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+  flex-direction: column;
+  min-width: 140px;
+  padding: 2px 0;
+  z-index: 1000;
+}
+
+.navbar ul li.dropdown:hover ul {
+  display: flex;
+}
+
+.navbar ul li.dropdown ul li a {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  color: #FFD700;
+  text-align: left;
+  border: none;   
+  transition: all 0.2s ease;
+}
+
+.navbar ul li.dropdown ul li a:hover {
+  background-color: #033d1d;
+  border-left: 3px solid #FFD700;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ==========================
+   Hamburger Menu - Left Corner
+========================== */
 .menu-toggle {
-  display: none; /* Hidden on large screens */
+  left: 320px;
+  top: 50%;
+  display: none; 
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 1001;
 }
 
 .menu-toggle span {
   display: block;
-  width: 28px;
-  height: 3px;
-  background-color: #FFD700; /* Golden lines */
+  width: 20px;  
+  height: 2px;
+  background-color: #FFD700; 
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-/* Responsive Styles */
+/* ==========================
+   Mobile Menu
+========================== */
 @media (max-width: 992px) {
   .navbar ul {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Hide menu initially */
-    height: 100vh;
-    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 10%; 
+    width: 180px;
     background-color: #064420;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    transition: right 0.3s ease;
+    align-items: flex-start;
+    padding: 5px;
+    border: 1px solid #FFD700;
+    border-radius: 6px; 
+    gap: 5px;
+    transition: left 0.3s ease;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 5px 10px;     
+    font-size: 13px;       
+    border-bottom: 1px solid #FFD700;
+  }
+
+  .navbar ul li:last-child a {
+    border-bottom: none;
   }
 
   .navbar ul.show {
-    right: 0; /* Show menu full screen */
+    left: 0; 
   }
 
   .menu-toggle {
-    display: flex; /* Show hamburger */
+    display: flex; 
+  }
+
+  /* Mobile Dropdown */
+  .navbar ul li.dropdown > span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #FFD700;
+    transition: all 0.3s ease;
+  }
+
+  .navbar ul li.dropdown.active > span {
+    background-color: #05532b;
+  }
+
+  .navbar ul li.dropdown ul {
+    display: none;
+    flex-direction: column;
+    width: 100%; 
+    background-color: #05532b;
+    border-radius: 6px;
+    padding: 5px 0;
+    margin-top: 5px;
+  }
+
+  .navbar ul li.dropdown.active ul {
+    display: flex;
+  }
+
+  .navbar ul li.dropdown ul li a {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    color: #FFD700;
+    text-align: left;
+    width: 100%;
+    transition: all 0.2s ease;
+    border: none;
+  }
+
+  .navbar ul li.dropdown ul li a:hover {
+    background-color: #033d1d;
+    border-left: 3px solid #FFD700;
+    border-radius: 0 4px 4px 0;
   }
 }
+
+/* ==========================
+   Hamburger Animation
+========================== */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+

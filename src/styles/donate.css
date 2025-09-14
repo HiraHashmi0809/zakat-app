@@ -8,6 +8,7 @@
 
 /* Body Styling */
 body {
+  margin-top: 30ox;
   background: #033d1d; 
   color: #fff;
   line-height: 1.6;
@@ -18,8 +19,9 @@ body {
 
 /* Donate Container */
 .donate-container {
+
   max-width: 500px;
-  margin: 40px auto;
+  margin: 100px auto;
   background: #044d26; 
   padding: 25px;
   border-radius: 12px;
@@ -72,8 +74,8 @@ Input Groups
   border: none;
   border: 2px solid #ccc;
   width: 100%;
-  padding: 20x;
-  font-size: 1rem;
+  padding: 14px;
+  font-size: 1.1rem;
   border-radius: 6px;
   transition: border-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
@@ -96,25 +98,124 @@ Input Groups
   
   margin-bottom: 15px;
 }
+/* Dropdown ko chhota aur pyara banane ke liye */
+select {
+  background: transparent;
+  color: #FFD700;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
 
-Button
-.btn {
+select option {
+  background: #064420;
+  color: #FFD700;
+  font-size: 0.95rem;
+}
+
+
+/* Select Dropdown */
+select {
+  background: #064420;
+  color: #FFD700;
+  border: 1px solid #FFD700;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+select option {
+  background: #033d1d;
+  color: #FFD700;
+}
+
+
+/* Payment Sections */
+.payment-section {
+  background: #064420;
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+/* Dynamic Input Box (below select) */
+.dynamic-input {
+  margin-top: 15px;
+  background: #044d26;
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  padding: 15px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.dynamic-input label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #FFD700;
+}
+
+.dynamic-input input {
   width: 100%;
   padding: 12px;
-
-  border: none;
-  color: #033d1d;
-  font-size: 1.1rem;
-  font-weight: bold;
   border-radius: 8px;
-  cursor: pointer;
+  border: 1px solid #FFD700;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  background: #033d1d;
+  color: #fff;
+  outline: none;
   transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background: #e6c200;
-  transform: translateY(-2px);
+.dynamic-input input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
 }
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Button */
+.btn {
+  display: block;
+  width: 100%;                 /* input ki tarah full width */
+  padding: 14px;               /* input ki tarah padding */
+  margin-top: 15px;            /* payment input ke niche gap */
+  border: 2px solid #FFD700;   /* input jesa golden border */
+  border-radius: 6px;          /* input jesa rounded */
+  background: #FFD700;         /* golden background */
+  color: #033d1d;              /* dark green text */
+  font-size: 1.1rem;           /* input jesa size */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6); /* input wali glow */
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #064420;
+  color: #FFD700;
+  box-shadow: 0 0 15px rgba(255,215,0,0.9);
+  transform: scale(1.05);
+}
+
 
 Popup
 .popup {
@@ -154,93 +255,4 @@ Popup
 
 .popup-content button:hover {
   background: #e6c200;
-}
-/* 📱 Responsive Design */
-@media (max-width: 768px) {
-      @media (max-width: 768px) {
-     .navbar
-      {
-        position: relative;
-      }
-      .navbar ul {
-        display: none;
-        flex-direction: column;
-        background: #064420;
-        width: 180px;
-        position: absolute;
-        top: 55px;
-        right: 20px; 
-        
-        padding: 10px 0;
-          border-radius: 8px;  
-         box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      }
-      .navbar ul li {
-      text-align: center;
-       padding: 8px 0;
-  }
-
-  .navbar ul li a 
-    {
-     color: #FFD700;
-    display: block;
-    width: 100%;
-      }
-      .navbar ul.show {
-        display: flex;
-        animation: dropdown 0.3s ease-in-out;
-      }
-
-      @keyframes dropdown {
-        from {opacity: 0; transform: translateY(-10px);}
-        to {opacity: 1; transform: translateY(0);}
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-    }
-
-
-  .donate-container {
-    width: 90%;
-    margin: 20px auto;
-    padding: 20px;
-  }
-
-  .input-group {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .input-group i {
-    margin-bottom: 6px;
-  }
-
-  .btn {
-    font-size: 1rem;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar .logo {
-    font-size: 1.1rem;
-  }
-
-  .donate-container .header {
-    font-size: 1.3rem;
-  }
-
-  .input-group input,
-  .input-group select {
-    font-size: 0.95rem;
-    padding: 7px;
-  }
-
-  .btn {
-    font-size: 0.95rem;
-    padding: 9px;
-  }
 }
