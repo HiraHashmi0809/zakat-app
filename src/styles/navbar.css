@@ -102,8 +102,8 @@
    Hamburger Menu - Left Corner
 ========================== */
 .menu-toggle {
-  left: 320px;
-  top: 50%;
+  left: 15px;
+  top: 15%;
   display: none; 
   flex-direction: column;
   cursor: pointer;
@@ -221,3 +221,8 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
