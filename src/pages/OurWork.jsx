@@ -1,85 +1,4 @@
 
-// import { Link } from "react-router-dom";
-// import "../styles/ourwork.css";
-
-// function OurWork() {
-//   return (
-//     <>
-     
-     
-//       {/* Hero Section */}
-//       <section className="hero">
-//         <h1>Our Work</h1>
-//   <div className="hero-image">
-//           <img src="assests/our work img.jpg" alt="Hero" />
-//         </div>
-//         <p>
-//           See how your donations are making a difference in the lives of people
-//           across Pakistan.
-//         </p>
-//       </section>
-
-//       {/* Work Section */}
-//       <section className="work">
-//         <div className="card">
-//           <img
-//             src="assests/food distribution.jpg"
-//             alt="Food Distribution"
-//           />
-//           <h3>Food Distribution</h3>
-//           <p>
-//             Providing essential food supplies to underprivileged families across
-//             the country.
-//           </p>
-//         </div>
-
-//         <div className="card">
-//           <img
-//             src="assests/education card.jpg"
-//             alt="Education Support"
-//           />
-//           <h3>Education Support</h3>
-//           <p>
-//             Supporting education by providing books, uniforms, and scholarships
-//             to needy students.
-//           </p>
-//         </div>
-
-//         <div className="card">
-//           <img
-//             src="assests/health card.png"
-//             alt="Healthcare Aid"
-//           />
-//           <h3>Healthcare Aid</h3>
-//           <p>
-//             Arranging free medical camps and providing healthcare facilities to
-//             poor communities.
-//           </p>
-//         </div>
-          
-      
-//       </section>
-
-//       {/* Video Section */}
-//       <section className="video-section">
-//         <h2>Watch Our Impact</h2>
-//         <div className="video-container">
-//           <video controls>
-//             <source
-//               src="/assests/PixVerse_V5_Image_Text_360P_A_cinematic_closin.mp4"
-//               type="video/mp4"
-//             />
-//             Your browser does not support the video tag.
-//           </video>
-//         </div>
-//       </section>
-
-
-//     </>
-//   );
-// }
-
-// export default OurWork;
 import { Link } from "react-router-dom";
 import "../styles/ourwork.css";
 
@@ -90,7 +9,7 @@ function OurWork() {
       <section className="hero">
         <h1>Our Work</h1>
         <div className="hero-image">
-          <img src="src/assets/our work img.jpg" alt="Hero" />
+          <img src="assets/our work img.jpg" alt="Hero" />
         </div>
         <p>
           See how your donations are making a difference in the lives of people
@@ -102,7 +21,7 @@ function OurWork() {
       <section className="work">
         <div className="card">
           <img
-            src="src/assets/food distribution.jpg"
+            src="assets/food distribution.jpg"
             alt="Food Distribution"
           />
           <h3>Food Distribution</h3>
@@ -114,7 +33,7 @@ function OurWork() {
 
         <div className="card">
           <img
-            src="src/assets/education card.jpg"
+            src="assets/education card.jpg"
             alt="Education Support"
           />
           <h3>Education Support</h3>
@@ -126,7 +45,7 @@ function OurWork() {
 
         <div className="card">
           <img
-            src="src/assets/health card.png"
+            src="assets/health card.png"
             alt="Healthcare Aid"
           />
           <h3>Healthcare Aid</h3>
@@ -143,7 +62,7 @@ function OurWork() {
         <div className="video-container">
           <video controls>
             <source
-              src="src/assets/PixVerse_V5_Image_Text_360P_A_cinematic_closin.mp4"
+              src="assets/PixVerse_V5_Image_Text_360P_A_cinematic_closin.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.

@@ -129,10 +129,10 @@
   /* Mobile Dropdown */
 
 /* smooth dropdown animation */
-/* @keyframes dropdownFade {
+@keyframes dropdownFade {
   from {opacity: 0; transform: translateY(590px);}
   to {opacity: 1; transform: translateY(0);}
-} */
+}
 
    .navbar ul {
     position: absolute;
@@ -166,59 +166,33 @@
 
   .menu-toggle {
     display: flex; 
-  } */
+  } 
 
   /* Mobile Dropdown */
-  .navbar ul li.dropdown > span {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; 
-    padding: 8px 12px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    color: #FFD700;
-    transition: all 0.3s ease;
-  }
+/* Mobile Dropdown */
 
-  .navbar ul li.dropdown.active > span {
-    background-color: #05532b;
-  }
+/* Hamburger button */
+.menu-toggle {
+  display: none; /* desktop pe hide */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute;
+  top: 35px;         /* 👈 top se thoda space */
+left: 590;      /* 👈 screen ke right corner pe */
+  z-index: 1001;
+}
 
-  .navbar ul li.dropdown ul {
-    display: none;
-    flex-direction: column;
-    width: 100%; 
-    background-color: #05532b;
-    border-radius: 6px;
-    padding: 5px 0;
-    margin-top: 5px;
-  }
+.menu-toggle span {
+  display: block;
+  width: 22px;  
+  height: 2px;
+  background-color: #FFD700; 
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
 
-  .navbar ul li.dropdown.active ul {
-    display: flex;
-  }
-
-  .navbar ul li.dropdown ul li a {
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    color: #FFD700;
-    text-align: left;
-    width: 100%;
-    transition: all 0.2s ease;
-    border: none;
-  }
-
-  .navbar ul li.dropdown ul li a:hover {
-    background-color: #033d1d;
-    border-left: 3px solid #FFD700;
-    border-radius: 0 4px 4px 0;
-  }
-} 
-
-/* ==========================
-   Hamburger Animation
-========================== */
+/* Active hamburger animation */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -229,8 +203,44 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Dropdown menu */
+.navbar ul {
+  position: absolute;
+  top: 100%;        /* 👈 toggle ke niche */
+     left: 0;    /* 👈 toggle ke sath right corner me */
+  width: 180px;
+  background-color: #064420;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+  border: 1px solid #FFD700;
+  border-radius: 6px; 
+  gap: 5px;
+  display: none; /* default hidden */
+    z-index: 1000; /* upar rahe */
+}
+
+.navbar ul.show {
+  display: flex; /* toggle click karte hi visible */
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 5px 10px;     
+  font-size: 13px;       
+  border-bottom: 1px solid #FFD700;
+}
+
+.navbar ul li:last-child a {
+  border-bottom: none;
+}
+
+/* Mobile view */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+ 
+    /* 👈 mobile pe visible */
   }
+}
 }

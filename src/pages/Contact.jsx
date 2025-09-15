@@ -1,7 +1,7 @@
 
 import Navbar from "../components/Navbar";
 
-import "../styles/contact.css"; // apne folder ke hisaab se path adjust karein
+import "../styles/contact.css"; 
 
 function Contact() {
   const toggleMenu = () => {
