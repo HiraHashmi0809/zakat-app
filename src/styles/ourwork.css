@@ -175,7 +175,7 @@ body {
     .video-section video,
   .video-section iframe {
     width: 100%;
-    height: 300px;   /* 👈 yahan apni desired height rakh lo */
+    height: 600px;   /* 👈 yahan apni desired height rakh lo */
     border-radius: 10px; /* optional for rounded corners */
   }
 }
