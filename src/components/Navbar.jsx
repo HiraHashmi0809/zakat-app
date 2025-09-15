@@ -123,7 +123,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="brand">
         <img
-          src="/assets/logo.jpeg"   // ✅ Fixed path (keep logo in public/assets/logo.jpeg)
+          src="src/assets/logo app.jpeg"   // ✅ Fixed path (keep logo in public/assets/logo.jpeg)
           alt="Al Khair Trust Logo"
         />
         <div className="logo">Al Khair Trust</div>

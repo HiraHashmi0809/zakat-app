@@ -102,8 +102,8 @@
    Hamburger Menu - Left Corner
 ========================== */
 .menu-toggle {
-  left: 15px;
-  top: 15%;
+  left:590px;
+  top: 50%;
   display: none; 
   flex-direction: column;
   cursor: pointer;
@@ -126,7 +126,15 @@
    Mobile Menu
 ========================== */
 @media (max-width: 992px) {
-  .navbar ul {
+  /* Mobile Dropdown */
+
+/* smooth dropdown animation */
+/* @keyframes dropdownFade {
+  from {opacity: 0; transform: translateY(590px);}
+  to {opacity: 1; transform: translateY(0);}
+} */
+
+   .navbar ul {
     position: absolute;
     top: 40px;
     left: 10%; 
@@ -158,7 +166,7 @@
 
   .menu-toggle {
     display: flex; 
-  }
+  } */
 
   /* Mobile Dropdown */
   .navbar ul li.dropdown > span {
@@ -206,7 +214,7 @@
     border-left: 3px solid #FFD700;
     border-radius: 0 4px 4px 0;
   }
-}
+} 
 
 /* ==========================
    Hamburger Animation

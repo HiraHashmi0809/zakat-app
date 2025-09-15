@@ -90,7 +90,7 @@ function OurWork() {
       <section className="hero">
         <h1>Our Work</h1>
         <div className="hero-image">
-          <img src="/assets/our-work-img.jpg" alt="Hero" />
+          <img src="src/assets/our work img.jpg" alt="Hero" />
         </div>
         <p>
           See how your donations are making a difference in the lives of people
@@ -102,7 +102,7 @@ function OurWork() {
       <section className="work">
         <div className="card">
           <img
-            src="/assets/food-distribution.jpg"
+            src="src/assets/food distribution.jpg"
             alt="Food Distribution"
           />
           <h3>Food Distribution</h3>
@@ -114,7 +114,7 @@ function OurWork() {
 
         <div className="card">
           <img
-            src="/assets/education-card.jpg"
+            src="src/assets/education card.jpg"
             alt="Education Support"
           />
           <h3>Education Support</h3>
@@ -126,7 +126,7 @@ function OurWork() {
 
         <div className="card">
           <img
-            src="/assets/health-card.png"
+            src="src/assets/health card.png"
             alt="Healthcare Aid"
           />
           <h3>Healthcare Aid</h3>
@@ -143,7 +143,7 @@ function OurWork() {
         <div className="video-container">
           <video controls>
             <source
-              src="/assets/impact-video.mp4"
+              src="src/assets/PixVerse_V5_Image_Text_360P_A_cinematic_closin.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
