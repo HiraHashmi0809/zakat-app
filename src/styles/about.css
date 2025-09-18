@@ -60,6 +60,12 @@
   transform: translateY(-8px);
   box-shadow: 0 12px 35px rgba(255, 215, 0, 0.4);
 }
+/* ✅ Ye naya part add karein */
+.card:focus,
+.card:active {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(255, 215, 0, 0.4);
+}
 .card .icon {
   background: #FFD700;
   color: #064420;
@@ -105,6 +111,13 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(255, 215, 0, 0.4);
+}
+
+/* ✅ Ye naya part add karein */
+.stat:focus,
+.stat:active {
   transform: translateY(-8px);
   box-shadow: 0 12px 35px rgba(255, 215, 0, 0.4);
 }

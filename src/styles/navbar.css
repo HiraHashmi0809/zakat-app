@@ -1,14 +1,11 @@
-/* ==========================
-   Navbar Container
-========================== */
 .navbar {
   width: 100%;
   height: 70px;
   background-color: #064420; 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* ✅ brand left, toggle/menu right */
   align-items: center;
-  padding: 0 20px;
+  padding: 0 clamp(10px, 3vw, 20px);
   position: fixed;
   top: 0;
   left: 0;
@@ -17,182 +14,42 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Brand / Logo */
+/* ✅ Brand (Logo + Name together on left) */
 .navbar .brand {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .navbar .brand img {
-  width: 50px;
-  height: 50px;
+  width: clamp(35px, 5vw, 50px);
+  height: clamp(35px, 5vw, 50px);
   border-radius: 50%;
 }
-
 .navbar .logo {
   color: #FFD700; 
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: bold;
 }
 
-/* Desktop Menu */
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.navbar ul li a {
-  color: #FFD700; 
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  /* padding: 5px 5px;         */
-  display: inline-block;
-}
-
-.navbar ul li a:hover {
-  background-color: #033d1d; 
-  color: #ffffff;
-  transform: scale(1.02);
-}
-
-/* Dropdown - Desktop */
-.navbar ul li.dropdown {
-  position: relative;
-}
-
-.navbar ul li.dropdown ul {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  background-color: #05532b;
-  border: 1px solid #FFD700;
-  border-radius: 6px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.3);
-  flex-direction: column;
-  min-width: 140px;
-  padding: 2px 0;
-  z-index: 1000;
-}
-
-.navbar ul li.dropdown:hover ul {
-  display: flex;
-}
-
-.navbar ul li.dropdown ul li a {
-  padding: 6px 10px;
-  font-size: 0.85rem;
-  color: #FFD700;
-  text-align: left;
-  border: none;   
-  transition: all 0.2s ease;
-}
-
-.navbar ul li.dropdown ul li a:hover {
-  background-color: #033d1d;
-  border-left: 3px solid #FFD700;
-  border-radius: 0 4px 4px 0;
-}
-
-/* ==========================
-   Hamburger Menu - Left Corner
-========================== */
+/* ✅ Menu Toggle (Right Side) */
 .menu-toggle {
-  left:590px;
-  top: 50%;
   display: none; 
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  position: absolute;
-  transform: translateY(-50%);
+  position: relative;  /* ✅ relative so it stays inside navbar */
+  left: 120px;
+  margin-left: auto;   /* ✅ push toggle to right corner */
   z-index: 1001;
 }
-
 .menu-toggle span {
   display: block;
-  width: 20px;  
+  width: 24px;  
   height: 2px;
   background-color: #FFD700; 
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-
-/* ==========================
-   Mobile Menu
-========================== */
-@media (max-width: 992px) {
-  /* Mobile Dropdown */
-
-/* smooth dropdown animation */
-@keyframes dropdownFade {
-  from {opacity: 0; transform: translateY(590px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-   .navbar ul {
-    position: absolute;
-    top: 40px;
-    left: 10%; 
-    width: 180px;
-    background-color: #064420;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 5px;
-    border: 1px solid #FFD700;
-    border-radius: 6px; 
-    gap: 5px;
-    transition: left 0.3s ease;
-  }
-
-  .navbar ul li a {
-    display: block;
-    padding: 5px 10px;     
-    font-size: 13px;       
-    border-bottom: 1px solid #FFD700;
-  }
-
-  .navbar ul li:last-child a {
-    border-bottom: none;
-  }
-
-  .navbar ul.show {
-    left: 0; 
-  }
-
-  .menu-toggle {
-    display: flex; 
-  } 
-
-  /* Mobile Dropdown */
-/* Mobile Dropdown */
-
-/* Hamburger button */
-.menu-toggle {
-  display: none; /* desktop pe hide */
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  position: absolute;
-  top: 35px;         /* 👈 top se thoda space */
-left: 590;      /* 👈 screen ke right corner pe */
-  z-index: 1001;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 22px;  
-  height: 2px;
-  background-color: #FFD700; 
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Active hamburger animation */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -203,44 +60,59 @@ left: 590;      /* 👈 screen ke right corner pe */
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Dropdown menu */
+/* ✅ Desktop Menu (center/right) */
 .navbar ul {
-  position: absolute;
-  top: 100%;        /* 👈 toggle ke niche */
-     left: 0;    /* 👈 toggle ke sath right corner me */
-  width: 180px;
-  background-color: #064420;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 5px;
-  border: 1px solid #FFD700;
-  border-radius: 6px; 
-  gap: 5px;
-  display: none; /* default hidden */
-    z-index: 1000; /* upar rahe */
+  list-style: none;
+  display: flex;
+  gap: clamp(15px, 3vw, 30px);
+  margin-left: auto; /* ✅ brand se dur rakhega */
+  background: none;
+  border: none;
+  box-shadow: none;
 }
-
-.navbar ul.show {
-  display: flex; /* toggle click karte hi visible */
-}
-
 .navbar ul li a {
-  display: block;
-  padding: 5px 10px;     
-  font-size: 13px;       
-  border-bottom: 1px solid #FFD700;
+  color: #FFD700; 
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  transition: all 0.3s ease;
 }
+.navbar ul li a:hover {
+  background-color: #033d1d; 
+  color: #ffffff;
+  transform: scale(1.02);
+} 
 
-.navbar ul li:last-child a {
-  border-bottom: none;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
- 
-    /* 👈 mobile pe visible */
+/* ✅ Mobile Menu */
+@media (max-width: 992px) {
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;   /* ✅ ab menu toggle ke neeche right side se open hoga */
+    width: 200px;
+    background-color: #064420;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+    border: 1px solid #FFD700;
+    border-radius: 6px; 
+    gap: 5px;
   }
-}
+  .navbar ul.show {
+    display: flex;
+  }
+  .navbar ul li a {
+    display: block;
+    padding: 8px 12px;     
+    font-size: 0.9rem;
+    border-bottom: 1px solid #FFD700;
+    width: 100%;
+  }
+  .navbar ul li:last-child a {
+    border-bottom: none;
+  }
+  .menu-toggle {
+    display: flex; /* ✅ sirf mobile/tablet pe visible */
+  }
 }
