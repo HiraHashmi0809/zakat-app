@@ -8,7 +8,7 @@ function Home() {
       <section className="hero">
         {/* Hero Section */}
 
-<img src="/home-hero.jpg" alt="Charity Help" />
+<img src="/home-hero.jpg" alt="Home Hero" />
         <div className="hero-content">
           <h1 className="hero-heading">Empowering Lives Through Zakat</h1>
           <p className="hero-subtext">
@@ -21,7 +21,7 @@ function Home() {
       {/* About Image */}
       <div className="content-img">
      
-<img src="/home-img.jpg" alt="Helping Hands" />
+<img src="/home-hero.jpg" alt="Home Hero" />
 
       </div>
 

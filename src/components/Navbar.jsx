@@ -81,14 +81,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="brand">
-        {/* ✅ Public folder safe image for Vite */}
-        {/* <img src="/logo-app.jpeg" alt="Al Khair Trust Logo" />
-          */}
-          <img 
-  src="/logo-app.jpeg" 
-  alt="Al Khair Trust Logo" 
-  className="w-32 h-auto object-contain" 
-/>
+   <img src="/logo-app.jpeg" alt="Logo" />
 
         <div className="logo">Al Khair Trust</div>
       </div>

@@ -9,7 +9,9 @@ function OurWork() {
       <section className="hero">
         <h1>Our Work</h1>
         <div className="hero-image">
-          <img src="/assets/our-work-img.jpg" alt="Hero" />
+      <img src="/our-work-img.jpg" alt="Our Work" />
+
+..
 
         </div>
         <p>
@@ -21,7 +23,8 @@ function OurWork() {
       {/* Work Section */}
       <section className="work">
         <div className="card">
-         <img src="/food-distribution.jpg" alt="Food Distribution" />
+<img src="/food-distribution.png" alt="Food Distribution" />
+
           <h3>Food Distribution</h3>
           <p>
             Providing essential food supplies to underprivileged families across
@@ -30,7 +33,7 @@ function OurWork() {
         </div>
 
         <div className="card">
-        <img src="/education-card.jpg" alt="Education Support" />
+<img src="/education-card.png" alt="Education Card" />
           <h3>Education Support</h3>
           <p>
             Supporting education by providing books, uniforms, and scholarships
@@ -39,7 +42,7 @@ function OurWork() {
         </div>
 
         <div className="card">
-    <img src="/health-card.png" alt="Health Support" />
+<img src="/health-card.png" alt="Health Card" />
           <h3>Healthcare Aid</h3>
           <p>
             Arranging free medical camps and providing healthcare facilities to
@@ -53,11 +56,9 @@ function OurWork() {
         <h2>Watch Our Impact</h2>
         <div className="video-container">
           <video controls>
-           <source
-  src="/PixVerse_V5_Image_Text_360P_A_cinematic_closin.mp4"
-  type="video/mp4"
-/>
+  
 
+  <source src="/our-video.mp4" type="video/mp4" />
             
             Your browser does not support the video tag.
           </video>
