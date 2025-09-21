@@ -23,8 +23,8 @@ function OurWork() {
       {/* Work Section */}
       <section className="work">
         <div className="card">
+<img src="/food-distribution.jpg" alt="Food Distribution" />
 
-<img src="/food-distribution.png" alt="Food Distribution" />
           <h3>Food Distribution</h3>
           <p>
             Providing essential food supplies to underprivileged families across
@@ -33,7 +33,7 @@ function OurWork() {
         </div>
 
         <div className="card">
-<img src="/education-card.png" alt="Education Card" />
+<img src="/education-card.jpg" alt="Education Card" />
           <h3>Education Support</h3>
           <p>
             Supporting education by providing books, uniforms, and scholarships
@@ -55,13 +55,10 @@ function OurWork() {
       <section className="video-section">
         <h2>Watch Our Impact</h2>
         <div className="video-container">
-          <video controls>
-  
-
+ <video controls width="100%">
   <source src="/work-video.mp4" type="video/mp4" />
-            
-            Your browser does not support the video tag.
-          </video>
+  Your browser does not support the video tag.
+</video>
         </div>
       </section>
     </>
