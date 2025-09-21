@@ -62,3 +62,5 @@ src/assests/*
 # Optional: Ignore generated assets
 public/vite.svg
 src/assets/react.svg
+
+.vercel

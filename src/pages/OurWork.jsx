@@ -23,8 +23,8 @@ function OurWork() {
       {/* Work Section */}
       <section className="work">
         <div className="card">
-<img src="/food-distribution.png" alt="Food Distribution" />
 
+<img src="/food-distribution.png" alt="Food Distribution" />
           <h3>Food Distribution</h3>
           <p>
             Providing essential food supplies to underprivileged families across
@@ -58,7 +58,7 @@ function OurWork() {
           <video controls>
   
 
-  <source src="/our-video.mp4" type="video/mp4" />
+  <source src="/work-video.mp4" type="video/mp4" />
             
             Your browser does not support the video tag.
           </video>

@@ -21,7 +21,7 @@ function Home() {
       {/* About Image */}
       <div className="content-img">
      
-<img src="/home-hero.jpg" alt="Home Hero" />
+<img src="/home-img.jpg" alt="Home" />
 
       </div>
 
