@@ -55,10 +55,10 @@ function OurWork() {
       <section className="video-section">
         <h2>Watch Our Impact</h2>
         <div className="video-container">
- <video controls width="100%">
-  <source src="/work-video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+  <video controls>
+    <source src="/work-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
         </div>
       </section>
     </>
