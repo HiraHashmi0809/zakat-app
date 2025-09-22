@@ -97,6 +97,7 @@
 @media (max-width: 480px) {
   .thankyou-card {
     padding: 20px;
+    
     border-radius: 15px;
   }
 

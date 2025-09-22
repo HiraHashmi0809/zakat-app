@@ -20,5 +20,4 @@ function ThankYouContact() {
     </div>
   );
 }
-
 export default ThankYouContact;
