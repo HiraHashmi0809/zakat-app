@@ -71,7 +71,8 @@
   display: inline-block;
   margin-top: 15px;
   padding: clamp(8px, 2vw, 14px) clamp(16px, 3vw, 28px);
-  background-color: #FFD700;
+
+   background-color: #FFD700;
   color: #064420;
   font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-weight: bold;
@@ -81,7 +82,9 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 .donate-btn:hover {
-  background: #fff;
+
+   background-color: lightgreen;
+
   color: #064420;
   transform: translateY(-2px);
 }

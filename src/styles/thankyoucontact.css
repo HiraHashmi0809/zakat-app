@@ -1,0 +1,84 @@
+.thankyoucontact-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background: linear-gradient(135deg, #064420 0%, #0a5c30 40%, #FFD700 100%);
+  padding: 20px;
+}
+
+.thankyoucontact-card {
+  background: linear-gradient(145deg, #064d2e, #0a3322);
+  color: #f9f6e8;
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  max-width: 500px;
+  width: 100%;
+  animation: fadeInUp 1s ease-in-out;
+  border: 2px solid goldenrod;
+}
+.thankyoucontact-card:hover {
+  background: linear-gradient(145deg, #013d26, #166534);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-color: #ffd700;
+}
+
+.thankyoucontact-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: goldenrod;
+}
+
+.thankyoucontact-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0.8rem 0;
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 25px;
+  background: goldenrod;
+  color: #013220;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #f1d97a;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .thankyoucontact-card {
+    padding: 1.8rem;
+  }
+
+  .thankyoucontact-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .thankyoucontact-card p {
+    font-size: 1rem;
+  }
+}

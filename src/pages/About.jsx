@@ -8,7 +8,6 @@ function About() {
     <>
 
 
-      {/* About Section */}
       <section className="about-section">
         <h1>About Al Khair Trust</h1>
         <div className="cards">
